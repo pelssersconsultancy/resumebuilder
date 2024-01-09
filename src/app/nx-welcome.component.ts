@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'resumebuilder-nx-welcome',
+  selector: 'rb-nx-welcome',
   standalone: true,
   imports: [CommonModule],
   template: `

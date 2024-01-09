@@ -24,7 +24,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "resumebuilder",
+            "prefix": "rb",
             "style": "camelCase"
           }
         ],
@@ -32,7 +32,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "resumebuilder",
+            "prefix": "rb",
             "style": "kebab-case"
           }
         ]
