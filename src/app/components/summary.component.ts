@@ -4,7 +4,12 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   selector: 'rb-summary',
   standalone: true,
   imports: [],
-  template: ` <div></div> `,
+  template: `
+    <div class="flex bg-orange-700">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  `,
   styles: [],
   encapsulation: ViewEncapsulation.Emulated,
 })
