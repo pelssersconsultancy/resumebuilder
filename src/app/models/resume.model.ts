@@ -4,6 +4,9 @@ export interface Resume {
   email: string;
   phone: string;
   linkedinID?: string;
+  picture: {
+    href: string;
+  };
   address: {
     street: string;
     houseNumber: number;
@@ -13,6 +16,7 @@ export interface Resume {
   };
   website?: string;
   summary: string;
+  jobTitle: string;
   skills: {
     name: string;
     level: 'NOVICE' | 'BEGINNER' | 'COMPETENT' | 'PROFICIENT' | 'EXPERT';

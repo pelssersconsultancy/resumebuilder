@@ -5,19 +5,19 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="flex bg-orange-700">
-      <div>1</div>
-      <div>2</div>
+    <div class="flex flex-col gap-2 p-4 bg-red-400 text-white rounded-lg ">
+      <div class="text-4xl font-bold">{{ firstName }} {{ lastName }}</div>
+      <div class="text-2xl">{{ jobTitle }}</div>
+      <hr />
+      <div>{{ summary }}</div>
     </div>
   `,
   styles: [],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SummaryComponent {
-  @Input() title: string;
+  @Input() jobTitle: string;
   @Input() firstName: string;
   @Input() lastName: string;
-  @Input() phone: string;
-  @Input() linkedinID?: string;
   @Input() summary: string;
 }
