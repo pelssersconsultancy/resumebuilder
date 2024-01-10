@@ -26,7 +26,7 @@ import { SectionComponent } from '../section/section.component';
             target="_blank"
             title="LinkedIn"
             href="https://www.linkedin.com/in/{{ linkedinID }}/"
-            >{{ linkedinID }}</a
+            >www.linkedin.com/in/{{ linkedinID }}</a
           >
         </div>
         } @if (githubID) {
@@ -36,7 +36,7 @@ import { SectionComponent } from '../section/section.component';
             target="_blank"
             title="Github"
             href="https://github.com/{{ githubID }}"
-            >{{ githubID }}</a
+            >github.com/{{ githubID }}</a
           >
         </div>
         }
