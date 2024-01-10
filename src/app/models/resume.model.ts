@@ -13,13 +13,22 @@ export interface Resume {
   website?: string;
   summary: string;
   jobTitle: string;
-  skills: {
-    name: string;
-    level: 'NOVICE' | 'BEGINNER' | 'COMPETENT' | 'PROFICIENT' | 'EXPERT';
-  }[];
+  skills: Skill[];
   experiences: Experience[];
   education: Education[];
   courses: Course[];
+}
+
+export type Level =
+  | 'NOVICE'
+  | 'BEGINNER'
+  | 'COMPETENT'
+  | 'PROFICIENT'
+  | 'EXPERT';
+
+export interface Skill {
+  name: string;
+  level: Level;
 }
 
 export interface Experience {

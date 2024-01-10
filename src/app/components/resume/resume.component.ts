@@ -5,6 +5,7 @@ import { SummaryComponent } from '../summary/summary.component';
 import { ExperiencesComponent } from '../experiences/experiences.component';
 import { CoursesComponent } from '../courses/courses.component';
 import { PersonalDetailsComponent } from '../personal-details/personal-details.component';
+import { SkillsComponent } from '../skills/skills.component';
 
 @Component({
   selector: 'rb-resume',
@@ -15,6 +16,7 @@ import { PersonalDetailsComponent } from '../personal-details/personal-details.c
     ExperiencesComponent,
     CoursesComponent,
     PersonalDetailsComponent,
+    SkillsComponent,
   ],
   template: `
     <div
@@ -47,6 +49,7 @@ import { PersonalDetailsComponent } from '../personal-details/personal-details.c
             [linkedinID]="resume.linkedinID"
             [githubID]="resume.githubID"
           ></rb-personal-details>
+          <rb-skills [skills]="resume.skills" />
         </div>
         <div class="flex flex-col w-3/4 gap-4">
           <rb-experiences [experiences]="resume.experiences" />

@@ -67,7 +67,12 @@ export class AppComponent {
         tags: ['Java', 'Spring', 'Hibernate', 'MySql'],
       },
     ],
-    skills: [],
+    skills: [
+      { name: 'Angular', level: 'PROFICIENT' },
+      { name: 'Typescript', level: 'PROFICIENT' },
+      { name: 'Tailwind', level: 'COMPETENT' },
+      { name: 'Svelte', level: 'BEGINNER' },
+    ],
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet non dolor ac rhoncus. Quisque faucibus libero lobortis volutpat tempus. Proin viverra efficitur lectus et viverra. Quisque porttitor sem sed velit ultrices egestas. Morbi fermentum luctus aliquet. Nam aliquet nunc mi, vitae commodo arcu elementum id. Pellentesque egestas turpis massa, sit amet maximus lectus placerat ut. Sed ultricies id augue non porttitor. Praesent vulputate pulvinar finibus.',
     linkedinID: 'john-doe-02950992',
