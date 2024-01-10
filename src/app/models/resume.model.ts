@@ -7,13 +7,8 @@ export interface Resume {
   picture: {
     href: string;
   };
-  address: {
-    street: string;
-    houseNumber: number;
-    city: string;
-    state: string;
-    zip: string;
-  };
+  city: string;
+  country: string;
   website?: string;
   summary: string;
   jobTitle: string;
@@ -21,7 +16,7 @@ export interface Resume {
     name: string;
     level: 'NOVICE' | 'BEGINNER' | 'COMPETENT' | 'PROFICIENT' | 'EXPERT';
   }[];
-  experience: Experience[];
+  experiences: Experience[];
   education: Education[];
   courses: Course[];
 }
