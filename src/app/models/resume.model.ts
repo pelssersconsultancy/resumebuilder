@@ -29,25 +29,21 @@ export interface Resume {
 export interface Experience {
   company: string;
   position: string;
-  website: string;
   startDate: string;
-  endDate: string;
-  summary: string;
+  endDate?: string;
+  highlights: string[];
   tags: string[];
 }
 
 export interface Education {
   institution: string;
-  area: string;
   studyType: string;
   startDate: string;
-  endDate: string;
-  gpa: string;
-  courses: string[];
+  endDate?: string;
 }
 
 export interface Course {
   institution: string;
-  year: string;
+  year: number;
   name: string;
 }

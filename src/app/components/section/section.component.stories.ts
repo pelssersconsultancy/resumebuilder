@@ -1,15 +1,15 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
-import { PictureComponent } from './picture.component';
+import { SectionComponent } from './section.component';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<PictureComponent> = {
-  component: PictureComponent,
+const meta: Meta<SectionComponent> = {
+  component: SectionComponent,
   decorators: [
     componentWrapperDecorator(
       (story) => `
-        <div class="w-1/2">
+        <div class="m-auto w-1/2 h-screen">
             ${story}
         </div>
       `
@@ -17,19 +17,16 @@ const meta: Meta<PictureComponent> = {
   ],
 };
 export default meta;
-type Story = StoryObj<PictureComponent>;
+type Story = StoryObj<SectionComponent>;
 
 export const Primary: Story = {
   args: {
-    href: 'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png?f=webp',
-    // href: 'https://www.dropbox.com/scl/fi/h04gqj1kpzr3ls7zyl3mh/thumbnail_robby.png',
+    title: 'Work Experience',
   },
 };
 
 export const Heading: Story = {
-  args: {
-    href: 'https://www.dropbox.com/scl/fi/h04gqj1kpzr3ls7zyl3mh/thumbnail_robby.png?rlkey=zv1rrj8hsnlsxcg6di5xldz9b&dl=0',
-  },
+  args: {},
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/summary works!/gi)).toBeTruthy();

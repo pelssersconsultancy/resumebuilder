@@ -6,7 +6,6 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<ResumeComponent> = {
   component: ResumeComponent,
-  title: 'ResumeComponent',
   decorators: [
     componentWrapperDecorator(
       (story) => `
