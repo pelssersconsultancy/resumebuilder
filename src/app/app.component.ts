@@ -17,8 +17,8 @@ export class AppComponent {
     firstName: 'John',
     lastName: 'Doe',
     jobTitle: 'Full stack (web) developer',
-    email: '',
-    phone: '',
+    email: 'john.doe@gmail.com',
+    phone: '+31547654478',
     picture: {
       href: 'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png?f=webp',
     },
@@ -70,7 +70,8 @@ export class AppComponent {
     skills: [],
     summary:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet non dolor ac rhoncus. Quisque faucibus libero lobortis volutpat tempus. Proin viverra efficitur lectus et viverra. Quisque porttitor sem sed velit ultrices egestas. Morbi fermentum luctus aliquet. Nam aliquet nunc mi, vitae commodo arcu elementum id. Pellentesque egestas turpis massa, sit amet maximus lectus placerat ut. Sed ultricies id augue non porttitor. Praesent vulputate pulvinar finibus.',
-    linkedinID: '',
+    linkedinID: 'john-doe-02950992',
+    githubID: 'johndoe',
     website: '',
   };
 }

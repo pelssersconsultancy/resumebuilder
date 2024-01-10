@@ -4,6 +4,7 @@ export interface Resume {
   email: string;
   phone: string;
   linkedinID?: string;
+  githubID?: string;
   picture: {
     href: string;
   };

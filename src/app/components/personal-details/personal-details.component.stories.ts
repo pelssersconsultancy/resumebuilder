@@ -22,6 +22,11 @@ type Story = StoryObj<PersonalDetailsComponent>;
 export const Primary: Story = {
   args: {
     email: 'john.doe@gmail.com',
+    phone: '+31547654478',
+    city: 'Maastricht',
+    country: 'The Netherlands',
+    linkedinID: 'john-doe-123456789',
+    githubID: 'johndoe',
   },
 };
 
