@@ -1,7 +1,7 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 import { SectionComponent } from '../section/section.component';
-import { Level, Skill } from 'src/app/models/resume.model';
+import { Skill } from 'src/app/models/resume.model';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -9,16 +9,45 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [SectionComponent, NgClass],
   template: `
-    <rb-section title="Skills">
+    <rb-section title="{{ title }}">
       <div class="flex flex-col gap-3">
         @for (skill of skills; track skill) {
         <div class="flex flex-col">
           <h3 class="font-bold">{{ skill.name }}</h3>
-          <div class="border border-red-400">
+          @if(display === 'continuous') {
+          <div class="border border-yellow-400">
             <div
-              [ngClass]="['bg-red-400', 'h-4', levelsDictionary[skill.level]]"
+              [ngClass]="[
+                'bg-yellow-400',
+                'h-4',
+                levelsDictionary[skill.level.name]
+              ]"
             ></div>
           </div>
+          } @if(display === 'discrete') {
+          <div class="flex gap-2">
+            <div
+              class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
+              [class.bg-yellow-400]="skill.level.value >= 1"
+            ></div>
+            <div
+              class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
+              [class.bg-yellow-400]="skill.level.value >= 2"
+            ></div>
+            <div
+              class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
+              [class.bg-yellow-400]="skill.level.value >= 3"
+            ></div>
+            <div
+              class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
+              [class.bg-yellow-400]="skill.level.value >= 4"
+            ></div>
+            <div
+              class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
+              [class.bg-yellow-400]="skill.level.value >= 5"
+            ></div>
+          </div>
+          }
         </div>
 
         }
@@ -29,9 +58,11 @@ import { NgClass } from '@angular/common';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SkillsComponent {
+  @Input() display: 'discrete' | 'continuous' = 'discrete';
+  @Input() title: string;
   @Input() skills: Skill[];
 
-  levelsDictionary: Record<Level, string> = {
+  levelsDictionary: Record<string, string> = {
     EXPERT: 'w-full',
     PROFICIENT: 'w-4/5',
     COMPETENT: 'w-3/5',

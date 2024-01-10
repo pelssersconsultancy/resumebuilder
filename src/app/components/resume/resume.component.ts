@@ -20,7 +20,7 @@ import { SkillsComponent } from '../skills/skills.component';
   ],
   template: `
     <div
-      class="flex flex-col gap-4 p-4 h-full rounded-md border border-gray-100"
+      class="flex flex-col gap-4 p-4 h-full rounded-md border border-yellow-300"
     >
       <div class="flex gap-8">
         <div class="flex justify-center flex-col w-1/4">
@@ -40,7 +40,7 @@ import { SkillsComponent } from '../skills/skills.component';
       </div>
       <hr />
       <div class="flex gap-8">
-        <div class="flex flex-col w-1/4">
+        <div class="flex flex-col w-1/4 gap-4 p-4">
           <rb-personal-details
             [email]="resume.email"
             [phone]="resume.phone"
@@ -49,9 +49,14 @@ import { SkillsComponent } from '../skills/skills.component';
             [linkedinID]="resume.linkedinID"
             [githubID]="resume.githubID"
           ></rb-personal-details>
-          <rb-skills [skills]="resume.skills" />
+          <rb-skills
+            [skills]="resume.technicalSkills"
+            title="Skills"
+            display="continuous"
+          />
+          <rb-skills [skills]="resume.languages" title="Languages" />
         </div>
-        <div class="flex flex-col w-3/4 gap-4">
+        <div class="flex flex-col w-3/4 gap-4  p-4">
           <rb-experiences [experiences]="resume.experiences" />
           <rb-courses [courses]="resume.courses" />
         </div>

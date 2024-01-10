@@ -13,18 +13,25 @@ export interface Resume {
   website?: string;
   summary: string;
   jobTitle: string;
-  skills: Skill[];
+  technicalSkills: Skill[];
+  languages: Skill[];
   experiences: Experience[];
   education: Education[];
   courses: Course[];
 }
 
+export const Novice = { name: 'NOVICE', value: 1 };
+export const Beginner = { name: 'BEGINNER', value: 2 };
+export const Competent = { name: 'COMPETENT', value: 3 };
+export const Proficient = { name: 'PROFICIENT', value: 4 };
+export const Expert = { name: 'EXPERT', value: 5 };
+
 export type Level =
-  | 'NOVICE'
-  | 'BEGINNER'
-  | 'COMPETENT'
-  | 'PROFICIENT'
-  | 'EXPERT';
+  | typeof Novice
+  | typeof Beginner
+  | typeof Competent
+  | typeof Proficient
+  | typeof Expert;
 
 export interface Skill {
   name: string;

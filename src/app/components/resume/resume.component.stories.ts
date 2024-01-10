@@ -3,6 +3,12 @@ import { ResumeComponent } from './resume.component';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import {
+  Beginner,
+  Competent,
+  Expert,
+  Proficient,
+} from 'src/app/models/resume.model';
 
 const meta: Meta<ResumeComponent> = {
   component: ResumeComponent,
@@ -82,11 +88,17 @@ export const Primary: Story = {
           tags: ['Java', 'Spring', 'Hibernate', 'MySql'],
         },
       ],
-      skills: [
-        { name: 'Angular', level: 'PROFICIENT' },
-        { name: 'Typescript', level: 'PROFICIENT' },
-        { name: 'Tailwind', level: 'COMPETENT' },
-        { name: 'Svelte', level: 'BEGINNER' },
+      technicalSkills: [
+        { name: 'Angular', level: Proficient },
+        { name: 'Typescript', level: Proficient },
+        { name: 'Tailwind', level: Competent },
+        { name: 'Svelte', level: Beginner },
+      ],
+      languages: [
+        { name: 'Dutch', level: Expert },
+        { name: 'English', level: Proficient },
+        { name: 'German', level: Beginner },
+        { name: 'French', level: Beginner },
       ],
       summary:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet non dolor ac rhoncus. Quisque faucibus libero lobortis volutpat tempus. Proin viverra efficitur lectus et viverra. Quisque porttitor sem sed velit ultrices egestas. Morbi fermentum luctus aliquet. Nam aliquet nunc mi, vitae commodo arcu elementum id. Pellentesque egestas turpis massa, sit amet maximus lectus placerat ut. Sed ultricies id augue non porttitor. Praesent vulputate pulvinar finibus.',

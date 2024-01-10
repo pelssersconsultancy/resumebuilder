@@ -3,6 +3,7 @@ import { SkillsComponent } from './skills.component';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { Beginner, Competent, Proficient } from '../../models/resume.model';
 
 const meta: Meta<SkillsComponent> = {
   component: SkillsComponent,
@@ -21,11 +22,12 @@ type Story = StoryObj<SkillsComponent>;
 
 export const Primary: Story = {
   args: {
+    title: 'Skills',
     skills: [
-      { name: 'Angular', level: 'PROFICIENT' },
-      { name: 'Typescript', level: 'PROFICIENT' },
-      { name: 'Tailwind', level: 'COMPETENT' },
-      { name: 'Svelte', level: 'BEGINNER' },
+      { name: 'Angular', level: Proficient },
+      { name: 'Typescript', level: Proficient },
+      { name: 'Tailwind', level: Competent },
+      { name: 'Svelte', level: Beginner },
     ],
   },
 };
