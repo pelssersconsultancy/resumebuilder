@@ -9,7 +9,7 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [SectionComponent, NgClass],
   template: `
-    <rb-section title="{{ title }}">
+    <rb-section title="{{ title }}" display="filled">
       <div class="flex flex-col gap-3">
         @for (skill of skills; track skill) {
         <div class="flex flex-col">

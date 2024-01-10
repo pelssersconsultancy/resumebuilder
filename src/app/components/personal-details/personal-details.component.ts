@@ -7,7 +7,7 @@ import { SectionComponent } from '../section/section.component';
   standalone: true,
   imports: [SectionComponent],
   template: `
-    <rb-section title="Personal Details">
+    <rb-section title="Personal Details" display="filled">
       <div class="flex flex-col gap-3">
         <div class="flex items-center gap-2">
           <img src="assets/email.png" class="w-4 h-4 " />{{ email }}
