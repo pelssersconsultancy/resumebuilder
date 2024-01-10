@@ -12,7 +12,7 @@ import { TagsComponent } from '../tags/tags.component';
       <div class="flex flex-col gap-8">
         @for (experience of experiences; track experience) {
         <div class="flex flex-col gap-1">
-          <h2 class="font-bold text-red-400">{{ experience.position }}</h2>
+          <h2 class="font-bold text-orange-400">{{ experience.position }}</h2>
           <div class="flex justify-between">
             <h3 class="font-bold">{{ experience.company }}</h3>
             <h4 class="text-sm">

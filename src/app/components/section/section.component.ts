@@ -7,14 +7,16 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   template: `
     <section class="flex flex-col gap-2">
       @if(display === 'outline') {
-      <h1 class="uppercase text-red-400 font-bold border-b border-red-400">
+      <h1
+        class="uppercase text-orange-400 text-xl font-bold border-b border-orange-400"
+      >
         {{ title }}
       </h1>
       } @else {
       <div class="flex">
-        <div class="bg-red-400 w-6 h-6 triangle"></div>
+        <div class="bg-orange-400 w-6 h-6 triangle"></div>
         <div
-          class="pr-4 text-right uppercase bg-red-400  text-white font-bold grow"
+          class="pr-4 text-right uppercase text-xl bg-orange-400  text-white font-bold grow flex justify-end items-center"
         >
           {{ title }}
         </div>
@@ -28,7 +30,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   styles: [
     `
       .triangle {
-        @apply w-6 h-6 bg-red-400;
+        @apply w-8 h-8 bg-orange-400;
         clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
       }
     `,
