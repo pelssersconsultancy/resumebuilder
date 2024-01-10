@@ -16,7 +16,7 @@ export interface Resume {
   technicalSkills: Skill[];
   languages: Skill[];
   experiences: Experience[];
-  education: Education[];
+  educations: Education[];
   courses: Course[];
 }
 
@@ -49,7 +49,7 @@ export interface Experience {
 
 export interface Education {
   institution: string;
-  studyType: string;
+  study: string;
   startDate: string;
   endDate?: string;
 }

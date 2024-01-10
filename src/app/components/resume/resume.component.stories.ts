@@ -43,7 +43,20 @@ export const Primary: Story = {
         { institution: 'Udemy', year: 2019, name: 'Front End Web Developer' },
         { institution: 'Coursera', year: 2018, name: 'Scala' },
       ],
-      education: [],
+      educations: [
+        {
+          institution: 'Zuyd Hogeschool',
+          study: 'Commercial Engineering',
+          startDate: '01-01-2016',
+          endDate: '31-12-2020',
+        },
+        {
+          institution: 'Zuyd Hogeschool',
+          study: 'Latin-Mathematics',
+          startDate: '01-01-2010',
+          endDate: '31-12-2015',
+        },
+      ],
       experiences: [
         {
           company: 'CompanyC',

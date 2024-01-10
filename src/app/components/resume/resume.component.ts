@@ -6,6 +6,7 @@ import { ExperiencesComponent } from '../experiences/experiences.component';
 import { CoursesComponent } from '../courses/courses.component';
 import { PersonalDetailsComponent } from '../personal-details/personal-details.component';
 import { SkillsComponent } from '../skills/skills.component';
+import { EducationsComponent } from '../educations/educations.component';
 
 @Component({
   selector: 'rb-resume',
@@ -17,6 +18,7 @@ import { SkillsComponent } from '../skills/skills.component';
     CoursesComponent,
     PersonalDetailsComponent,
     SkillsComponent,
+    EducationsComponent,
   ],
   template: `
     <div
@@ -58,6 +60,7 @@ import { SkillsComponent } from '../skills/skills.component';
         <div class="flex flex-col w-3/4 gap-4 p-4 ">
           <rb-experiences [experiences]="resume.experiences" />
           <rb-courses [courses]="resume.courses" />
+          <rb-educations [educations]="resume.educations" />
         </div>
       </div>
     </div>
