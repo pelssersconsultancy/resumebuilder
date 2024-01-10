@@ -5,7 +5,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="flex flex-col gap-2 p-4 bg-yellow-600 text-white rounded-lg ">
+    <div class="flex flex-col gap-2 p-4  rounded-lg ">
       <div class="text-4xl font-bold">{{ firstName }} {{ lastName }}</div>
       <div class="text-2xl">{{ jobTitle }}</div>
       <hr />

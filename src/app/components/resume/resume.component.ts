@@ -20,9 +20,9 @@ import { SkillsComponent } from '../skills/skills.component';
   ],
   template: `
     <div
-      class="flex flex-col gap-4 p-4 h-full rounded-md border border-yellow-300"
+      class="flex flex-col gap-2 h-full rounded-md  border-gray-400 bg-white"
     >
-      <div class="flex gap-8">
+      <div class="flex">
         <div class="flex justify-center flex-col w-1/4">
           <rb-picture
             class="mx-auto w-48 h-48"
@@ -38,9 +38,8 @@ import { SkillsComponent } from '../skills/skills.component';
           ></rb-summary>
         </div>
       </div>
-      <hr />
-      <div class="flex gap-8">
-        <div class="flex flex-col w-1/4 gap-4 p-4">
+      <div class="flex">
+        <div class="flex flex-col w-1/4 gap-4 p-4 bg-neutral-50">
           <rb-personal-details
             [email]="resume.email"
             [phone]="resume.phone"
@@ -56,7 +55,7 @@ import { SkillsComponent } from '../skills/skills.component';
           />
           <rb-skills [skills]="resume.languages" title="Languages" />
         </div>
-        <div class="flex flex-col w-3/4 gap-4  p-4">
+        <div class="flex flex-col w-3/4 gap-4 p-4 ">
           <rb-experiences [experiences]="resume.experiences" />
           <rb-courses [courses]="resume.courses" />
         </div>
