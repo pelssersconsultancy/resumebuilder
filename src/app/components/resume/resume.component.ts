@@ -50,12 +50,12 @@ import { EducationsComponent } from '../educations/educations.component';
             [linkedinID]="resume.linkedinID"
             [githubID]="resume.githubID"
           ></rb-contact>
+          <rb-skills [skills]="resume.languages" title="Languages" />
           <rb-skills
             [skills]="resume.technicalSkills"
             title="Skills"
             display="continuous"
           />
-          <rb-skills [skills]="resume.languages" title="Languages" />
         </div>
         <div class="flex flex-col w-[135mm] gap-4 p-4 ">
           <rb-experiences [experiences]="resume.experiences" />

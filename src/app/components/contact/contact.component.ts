@@ -10,14 +10,17 @@ import { SectionComponent } from '../section/section.component';
     <rb-section title="Contact" display="filled">
       <div class="flex flex-col gap-3">
         <div class="flex items-center gap-2">
-          <img src="assets/email.png" class="w-4 h-4 " />{{ email }}
+          <img src="assets/email.png" class="w-4 h-4 " />
+          <a href="mailto:{{ email }}">{{ email }}</a>
         </div>
         <div class="flex items-center gap-2">
           <img src="assets/cell-phone.png" class="w-4 h-4 " />{{ phone }}
         </div>
         <div class="flex items-center gap-2">
-          <img src="assets/location.png" class="w-4 h-4 " />{{ city }},
-          {{ country }}
+          <img src="assets/location.png" class="w-4 h-4 " />
+          <a href="https://www.google.nl/maps/place/{{ city }}" target="_blank"
+            >{{ city }}, {{ country }}</a
+          >
         </div>
         @if (linkedinID) {
         <div class="flex items-center gap-2">

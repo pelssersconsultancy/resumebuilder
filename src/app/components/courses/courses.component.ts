@@ -7,7 +7,7 @@ import { SectionComponent } from '../section/section.component';
   standalone: true,
   imports: [SectionComponent],
   template: `
-    <rb-section title="Courses">
+    <rb-section title="Courses / Certificates">
       <div class="flex flex-col gap-2">
         @for (course of courses; track course) {
         <div>
