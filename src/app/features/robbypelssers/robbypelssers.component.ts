@@ -26,7 +26,7 @@ export class RobbyPelssersComponent {
     email: 'pelssersconsultancy@gmail.com',
     phone: '+31627654926',
     picture: {
-      href: 'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png?f=webp',
+      href: 'https://www.dropbox.com/scl/fi/9p9yydzhhjvi6e6w6fq26/robbypelssers.jpeg?rlkey=67h71e75pbvcozbp25w6g1oxw&raw=1',
     },
     city: 'Landgraaf',
     country: 'The Netherlands',
