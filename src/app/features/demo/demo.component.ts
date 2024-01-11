@@ -11,23 +11,23 @@ import {
 @Component({
   standalone: true,
   imports: [ResumeComponent],
-  selector: 'rb-robbypelssers',
-  templateUrl: './robbypelssers.component.html',
-  styleUrl: './robbypelssers.component.scss',
+  selector: 'rb-demo',
+  templateUrl: './demo.component.html',
+  styles: [],
 })
-export class RobbyPelssersComponent {
-  title = 'Resume Robby Pelssers';
+export class DemoComponent {
+  title = 'Demo Resume';
 
   resume: Resume = {
-    firstName: 'Robby',
-    lastName: 'Pelssers',
+    firstName: 'John',
+    lastName: 'Doe',
     jobTitle: 'Full stack (web) developer',
-    email: 'pelssersconsultancy@gmail.com',
-    phone: '+31627654926',
+    email: 'john.doe@gmail.com',
+    phone: '+31547654478',
     picture: {
-      href: 'https://www.dropbox.com/scl/fi/9p9yydzhhjvi6e6w6fq26/robbypelssers.jpeg?rlkey=67h71e75pbvcozbp25w6g1oxw&raw=1',
+      href: 'https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-6299539-5187871.png?f=webp',
     },
-    city: 'Landgraaf',
+    city: 'Maastricht',
     country: 'The Netherlands',
     courses: [
       { institution: 'Udemy', year: 2019, name: 'Angular' },

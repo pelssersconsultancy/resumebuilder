@@ -25,13 +25,13 @@ import { EducationsComponent } from '../educations/educations.component';
       class="flex flex-col gap-2 h-full rounded-md  border-gray-400 bg-white"
     >
       <div class="flex">
-        <div class="flex justify-center flex-col w-2/6">
+        <div class="flex justify-center flex-col w-[75mm]">
           <rb-picture
             class="mx-auto w-48 h-48"
             [href]="resume.picture.href"
           ></rb-picture>
         </div>
-        <div class="flex justify-center  flex-col w-4/6">
+        <div class="flex justify-center  flex-col w-[135mm]">
           <rb-summary
             [summary]="resume.summary"
             [firstName]="resume.firstName"
@@ -41,7 +41,7 @@ import { EducationsComponent } from '../educations/educations.component';
         </div>
       </div>
       <div class="flex">
-        <div class="flex flex-col w-2/6 gap-4 p-4 bg-neutral-50">
+        <div class="flex flex-col w-[75mm] gap-4 p-4 bg-neutral-50">
           <rb-contact
             [email]="resume.email"
             [phone]="resume.phone"
@@ -57,7 +57,7 @@ import { EducationsComponent } from '../educations/educations.component';
           />
           <rb-skills [skills]="resume.languages" title="Languages" />
         </div>
-        <div class="flex flex-col w-4/6 gap-4 p-4 ">
+        <div class="flex flex-col w-[135mm] gap-4 p-4 ">
           <rb-experiences [experiences]="resume.experiences" />
           <rb-courses [courses]="resume.courses" />
           <rb-educations [educations]="resume.educations" />
