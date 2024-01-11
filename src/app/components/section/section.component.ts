@@ -29,6 +29,12 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   `,
   styles: [
     `
+      div {
+        @media print {
+          print-color-adjust: exact;
+        }
+      }
+
       .triangle {
         @apply w-8 h-8 bg-orange-400;
         clip-path: polygon(0% 50%, 100% 100%, 100% 0%);

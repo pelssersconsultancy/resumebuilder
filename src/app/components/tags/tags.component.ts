@@ -11,7 +11,15 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
       }
     </ul>
   `,
-  styles: [],
+  styles: [
+    `
+      li {
+        @media print {
+          print-color-adjust: exact;
+        }
+      }
+    `,
+  ],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class TagsComponent {

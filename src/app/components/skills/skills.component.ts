@@ -54,7 +54,15 @@ import { NgClass } from '@angular/common';
       </div>
     </rb-section>
   `,
-  styles: [],
+  styles: [
+    `
+      div {
+        @media print {
+          print-color-adjust: exact;
+        }
+      }
+    `,
+  ],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SkillsComponent {
