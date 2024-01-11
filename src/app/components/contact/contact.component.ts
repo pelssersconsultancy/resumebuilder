@@ -3,11 +3,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { SectionComponent } from '../section/section.component';
 
 @Component({
-  selector: 'rb-personal-details',
+  selector: 'rb-contact',
   standalone: true,
   imports: [SectionComponent],
   template: `
-    <rb-section title="Personal Details" display="filled">
+    <rb-section title="Contact" display="filled">
       <div class="flex flex-col gap-3">
         <div class="flex items-center gap-2">
           <img src="assets/email.png" class="w-4 h-4 " />{{ email }}
@@ -46,7 +46,7 @@ import { SectionComponent } from '../section/section.component';
   styles: [],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class PersonalDetailsComponent {
+export class ContactComponent {
   @Input() email: string;
   @Input() phone: string;
   @Input() city: string;

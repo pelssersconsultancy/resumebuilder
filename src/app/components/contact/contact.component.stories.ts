@@ -1,11 +1,11 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
-import { PersonalDetailsComponent } from './personal-details.component';
+import { ContactComponent } from './contact.component';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<PersonalDetailsComponent> = {
-  component: PersonalDetailsComponent,
+const meta: Meta<ContactComponent> = {
+  component: ContactComponent,
   decorators: [
     componentWrapperDecorator(
       (story) => `
@@ -17,7 +17,7 @@ const meta: Meta<PersonalDetailsComponent> = {
   ],
 };
 export default meta;
-type Story = StoryObj<PersonalDetailsComponent>;
+type Story = StoryObj<ContactComponent>;
 
 export const Primary: Story = {
   args: {

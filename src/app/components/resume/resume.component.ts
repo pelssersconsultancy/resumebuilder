@@ -4,7 +4,7 @@ import { Resume } from 'src/app/models/resume.model';
 import { SummaryComponent } from '../summary/summary.component';
 import { ExperiencesComponent } from '../experiences/experiences.component';
 import { CoursesComponent } from '../courses/courses.component';
-import { PersonalDetailsComponent } from '../personal-details/personal-details.component';
+import { ContactComponent } from '../contact/contact.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { EducationsComponent } from '../educations/educations.component';
 
@@ -16,7 +16,7 @@ import { EducationsComponent } from '../educations/educations.component';
     SummaryComponent,
     ExperiencesComponent,
     CoursesComponent,
-    PersonalDetailsComponent,
+    ContactComponent,
     SkillsComponent,
     EducationsComponent,
   ],
@@ -42,14 +42,14 @@ import { EducationsComponent } from '../educations/educations.component';
       </div>
       <div class="flex">
         <div class="flex flex-col w-1/4 gap-4 p-4 bg-neutral-50">
-          <rb-personal-details
+          <rb-contact
             [email]="resume.email"
             [phone]="resume.phone"
             [city]="resume.city"
             [country]="resume.country"
             [linkedinID]="resume.linkedinID"
             [githubID]="resume.githubID"
-          ></rb-personal-details>
+          ></rb-contact>
           <rb-skills
             [skills]="resume.technicalSkills"
             title="Skills"
