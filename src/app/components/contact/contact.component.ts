@@ -8,7 +8,7 @@ import { SectionComponent } from '../section/section.component';
   imports: [SectionComponent],
   template: `
     <rb-section title="Contact" display="filled">
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3 text-sm">
         <div class="flex items-center gap-2">
           <img src="assets/email.png" class="w-4 h-4 " />
           <a href="mailto:{{ email }}">{{ email }}</a>
