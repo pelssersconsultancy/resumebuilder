@@ -59,8 +59,8 @@ import { EducationsComponent } from '../educations/educations.component';
         </div>
         <div class="flex flex-col w-[135mm] gap-4 p-4 ">
           <rb-experiences [experiences]="resume.experiences" />
-          <rb-courses [courses]="resume.courses" />
           <rb-educations [educations]="resume.educations" />
+          <rb-courses [courses]="resume.courses" />
         </div>
       </div>
     </div>
