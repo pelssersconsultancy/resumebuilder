@@ -5,9 +5,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <ul class="flex gap-1">
+    <ul class="flex flex-wrap gap-1">
       @for (tag of tags; track tag) {
-      <li class="py-1 px-2 rounded-md bg-yellow-300">{{ tag }}</li>
+      <li class="py-1 px-2 rounded-md bg-yellow-300 whitespace-nowrap">
+        {{ tag }}
+      </li>
       }
     </ul>
   `,
