@@ -31,6 +31,21 @@ export class RobbyPelssersComponent {
     country: 'The Netherlands',
     courses: [
       {
+        institution: 'Udemy',
+        year: 2024,
+        name: 'Kubernetes Hands-On - Deploy Microservices to the AWS Cloud',
+      },
+      {
+        institution: 'Udemy',
+        year: 2024,
+        name: 'Docker and Kubernetes: The Complete Guide',
+      },
+      {
+        institution: 'Udemy',
+        year: 2024,
+        name: 'NestJS Microservices: Build & Deploy a Scaleable Backend',
+      },
+      {
         institution: 'TheBurningMonk',
         year: 2023,
         name: 'AppSync Masterclass',
