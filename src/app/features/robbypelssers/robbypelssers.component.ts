@@ -276,15 +276,11 @@ export class RobbyPelssersComponent {
     ],
     experiences: [
       {
-        company: 'Engie',
-        startDate: '01-05-2018',
-        endDate: '31-12-2023',
+        company: 'Engie Digital',
+        startDate: '01-07-2023',
+        endDate: '31-12-2024',
         position: 'Full Stack Developer',
-        highlights: [
-          'Development of Backend for Frontend with NestJS',
-          'Maintenance of old AngularJS apps',
-          'Development of greenfield Angular platform',
-        ],
+        highlights: ['Development of Energie platform for Engie Digital Paris'],
         tags: [
           'AngularJS',
           'NestJS',
@@ -295,6 +291,25 @@ export class RobbyPelssersComponent {
           'SyncFusion',
           'Typescript',
         ],
+      },
+      {
+        company: 'Equans Nederland',
+        startDate: '01-04-2022',
+        endDate: '30-06-2023',
+        position: 'Full Stack Developer',
+        highlights: ['Development of energie platform for Equans'],
+        tags: ['AngularJS', 'NestJS', 'AWS', 'Angular17', 'Typescript'],
+      },
+      {
+        company: 'Engie services Nederland',
+        startDate: '01-05-2018',
+        endDate: '31-12-2023',
+        position: 'Full Stack Developer',
+        highlights: [
+          'Development of Backend for Frontend with NestJS',
+          'Maintenance of old AngularJS apps',
+        ],
+        tags: ['AngularJS', 'NestJS', 'AWS', 'Angular17', 'Typescript'],
       },
       {
         company: 'TechFirst',
@@ -324,7 +339,7 @@ export class RobbyPelssersComponent {
         tags: ['Java-7', 'J2EE', 'JPA', 'Spring'],
       },
       {
-        company: 'Engie',
+        company: 'Cofely',
         startDate: '01-12-2015',
         endDate: '31-10-2016',
         position: 'Java Developer (Lead)',
