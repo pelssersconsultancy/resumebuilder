@@ -1,8 +1,8 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { ResumeComponent } from './resume.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/test';
+import { expect } from '@storybook/test';
 import {
   Beginner,
   Competent,
@@ -18,7 +18,7 @@ const meta: Meta<ResumeComponent> = {
         <div class="m-auto w-2/3 h-screen">
             ${story}
         </div>
-      `
+      `,
     ),
   ],
 };

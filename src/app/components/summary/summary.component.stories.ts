@@ -1,8 +1,8 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { SummaryComponent } from './summary.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/test';
+import { expect } from '@storybook/test';
 
 const meta: Meta<SummaryComponent> = {
   component: SummaryComponent,
@@ -12,7 +12,7 @@ const meta: Meta<SummaryComponent> = {
         <div class="w-1/2">
             ${story}
         </div>
-      `
+      `,
     ),
   ],
 };

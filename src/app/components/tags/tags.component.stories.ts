@@ -1,8 +1,8 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { TagsComponent } from './tags.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/test';
+import { expect } from '@storybook/test';
 
 const meta: Meta<TagsComponent> = {
   component: TagsComponent,
@@ -12,7 +12,7 @@ const meta: Meta<TagsComponent> = {
         <div class="m-auto w-1/2 h-screen">
             ${story}
         </div>
-      `
+      `,
     ),
   ],
 };

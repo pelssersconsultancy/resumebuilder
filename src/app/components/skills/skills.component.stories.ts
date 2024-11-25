@@ -1,8 +1,8 @@
 import { Meta, StoryObj, componentWrapperDecorator } from '@storybook/angular';
 import { SkillsComponent } from './skills.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/test';
+import { expect } from '@storybook/test';
 import { Beginner, Competent, Proficient } from '../../models/resume.model';
 
 const meta: Meta<SkillsComponent> = {
@@ -13,7 +13,7 @@ const meta: Meta<SkillsComponent> = {
         <div class="m-auto w-1/2 h-screen">
             ${story}
         </div>
-      `
+      `,
     ),
   ],
 };
