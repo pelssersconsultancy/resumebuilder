@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rb-tags',
@@ -6,7 +6,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   imports: [],
   template: `
     <ul class="flex flex-wrap gap-1">
-      @for (tag of tags; track tag) {
+      @for (tag of tags(); track tag) {
       <li class="py-1 px-2 rounded-md bg-yellow-300 whitespace-nowrap">
         {{ tag }}
       </li>
@@ -25,5 +25,5 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class TagsComponent {
-  @Input() tags: string[];
+  tags = input<string[]>();
 }

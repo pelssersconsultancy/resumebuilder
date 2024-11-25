@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rb-section',
@@ -6,11 +6,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   imports: [],
   template: `
     <section class="flex flex-col gap-2">
-      @if(display === 'outline') {
+      @if(display() === 'outline') {
       <h1
         class="uppercase text-orange-400 text-xl font-bold border-b border-orange-400"
       >
-        {{ title }}
+        {{ title() }}
       </h1>
       } @else {
       <div class="flex">
@@ -18,7 +18,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
         <div
           class="pr-4 text-right uppercase text-xl bg-orange-400  text-white font-bold grow flex justify-end items-center"
         >
-          {{ title }}
+          {{ title() }}
         </div>
       </div>
 
@@ -44,6 +44,6 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SectionComponent {
-  @Input() display: 'outline' | 'filled' = 'outline';
-  @Input() title: string;
+  display = input<'outline' | 'filled'>('outline');
+  title = input<string>();
 }

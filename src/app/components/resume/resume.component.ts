@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { PictureComponent } from '../picture/picture.component';
 import { Resume } from 'src/app/models/resume.model';
 import { SummaryComponent } from '../summary/summary.component';
@@ -21,6 +21,7 @@ import { EducationsComponent } from '../educations/educations.component';
     EducationsComponent,
   ],
   template: `
+    @let myResume = resume();
     <div
       class="flex flex-col gap-2 h-full rounded-md  border-gray-400 bg-white"
     >
@@ -28,39 +29,37 @@ import { EducationsComponent } from '../educations/educations.component';
         <div class="flex justify-center flex-col w-[75mm]">
           <rb-picture
             class="mx-auto w-48 h-48"
-            [href]="resume.picture.href"
+            [href]="myResume.picture.href"
           ></rb-picture>
         </div>
         <div class="flex justify-center  flex-col w-[135mm]">
           <rb-summary
-            [summary]="resume.summary"
-            [firstName]="resume.firstName"
-            [lastName]="resume.lastName"
-            [jobTitle]="resume.jobTitle"
+            [summary]="myResume.summary"
+            [firstName]="myResume.firstName"
+            [lastName]="myResume.lastName"
+            [jobTitle]="myResume.jobTitle"
           ></rb-summary>
         </div>
       </div>
       <div class="flex">
         <div class="flex flex-col w-[75mm] gap-4 p-4 bg-neutral-50">
           <rb-contact
-            [email]="resume.email"
-            [phone]="resume.phone"
-            [city]="resume.city"
-            [country]="resume.country"
-            [linkedinID]="resume.linkedinID"
-            [githubID]="resume.githubID"
+            [email]="myResume.email"
+            [phone]="myResume.phone"
+            [city]="myResume.city"
+            [country]="myResume.country"
+            [linkedinID]="myResume.linkedinID"
+            [githubID]="myResume.githubID"
           ></rb-contact>
-          <rb-skills [skills]="resume.languages" title="Languages" />
-          <!-- <rb-skills
-            [skills]="resume.technicalSkills"
-            title="Skills"
-            display="continuous"
-          /> -->
+          <rb-skills
+            [skills]="myResume.languages"
+            title="Languages"
+          /><!-- [display]="'continuous'" -->
         </div>
         <div class="flex flex-col w-[135mm] gap-4 p-4 ">
-          <rb-experiences [experiences]="resume.experiences" />
-          <rb-educations [educations]="resume.educations" />
-          <rb-courses [courses]="resume.courses" />
+          <rb-experiences [experiences]="myResume.experiences" />
+          <rb-educations [educations]="myResume.educations" />
+          <rb-courses [courses]="myResume.courses" />
         </div>
       </div>
     </div>
@@ -69,5 +68,5 @@ import { EducationsComponent } from '../educations/educations.component';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class ResumeComponent {
-  @Input() resume: Resume;
+  resume = input.required<Resume>();
 }

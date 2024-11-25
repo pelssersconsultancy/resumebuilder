@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { Education } from 'src/app/models/resume.model';
 import { SectionComponent } from '../section/section.component';
 
@@ -9,7 +9,7 @@ import { SectionComponent } from '../section/section.component';
   template: `
     <rb-section title="Education">
       <div class="flex flex-col gap-8">
-        @for (education of educations; track education) {
+        @for (education of educations(); track education.study) {
         <div class="flex flex-col gap-1">
           <h2 class="font-bold text-orange-400">{{ education.study }}</h2>
           <div class="flex justify-between">
@@ -27,5 +27,5 @@ import { SectionComponent } from '../section/section.component';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class EducationsComponent {
-  @Input() educations: Education[];
+  educations = input<Education[]>();
 }

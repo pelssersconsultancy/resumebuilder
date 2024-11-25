@@ -1,11 +1,11 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rb-picture',
   standalone: true,
   imports: [],
   template: `<img
-    [src]="href"
+    [src]="href()"
     alt="Profile Picture"
     class="w-52 rounded-lg"
   /> `,
@@ -13,5 +13,5 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class PictureComponent {
-  @Input() href: string;
+  href = input<string>();
 }

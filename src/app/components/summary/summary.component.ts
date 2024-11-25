@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rb-summary',
@@ -6,18 +6,18 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   imports: [],
   template: `
     <div class="flex flex-col gap-2 p-4  rounded-lg ">
-      <div class="text-4xl font-bold">{{ firstName }} {{ lastName }}</div>
-      <div class="text-2xl">{{ jobTitle }}</div>
+      <div class="text-4xl font-bold">{{ firstName() }} {{ lastName() }}</div>
+      <div class="text-2xl">{{ jobTitle() }}</div>
       <hr />
-      <div>{{ summary }}</div>
+      <div>{{ summary() }}</div>
     </div>
   `,
   styles: [],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SummaryComponent {
-  @Input() jobTitle: string;
-  @Input() firstName: string;
-  @Input() lastName: string;
-  @Input() summary: string;
+  jobTitle = input<string>();
+  firstName = input<string>();
+  lastName = input<string>();
+  summary = input<string>();
 }

@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, input } from '@angular/core';
 
 import { SectionComponent } from '../section/section.component';
 
@@ -11,18 +11,20 @@ import { SectionComponent } from '../section/section.component';
       <div class="flex flex-col gap-3 text-sm">
         <div class="flex items-center gap-2">
           <img src="assets/email.png" class="w-4 h-4 " />
-          <a href="mailto:{{ email }}">{{ email }}</a>
+          <a href="mailto:{{ email() }}">{{ email() }}</a>
         </div>
         <div class="flex items-center gap-2">
-          <img src="assets/cell-phone.png" class="w-4 h-4 " />{{ phone }}
+          <img src="assets/cell-phone.png" class="w-4 h-4 " />{{ phone() }}
         </div>
         <div class="flex items-center gap-2">
           <img src="assets/location.png" class="w-4 h-4 " />
-          <a href="https://www.google.nl/maps/place/{{ city }}" target="_blank"
-            >{{ city }}, {{ country }}</a
+          <a
+            href="https://www.google.nl/maps/place/{{ city() }}"
+            target="_blank"
+            >{{ city() }}, {{ country() }}</a
           >
         </div>
-        @if (linkedinID) {
+        @if (linkedinID(); as linkedinID) {
         <div class="flex items-center gap-2">
           <img src="assets/linkedin.png" class="w-4 h-4 " /><a
             class="hover:text-blue-600"
@@ -32,7 +34,7 @@ import { SectionComponent } from '../section/section.component';
             >www.linkedin.com/in/{{ linkedinID }}</a
           >
         </div>
-        } @if (githubID) {
+        } @if (githubID(); as githubID) {
         <div class="flex items-center gap-2">
           <img src="assets/github.png" class="w-4 h-4 " /><a
             class="hover:text-blue-600"
@@ -50,10 +52,10 @@ import { SectionComponent } from '../section/section.component';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class ContactComponent {
-  @Input() email: string;
-  @Input() phone: string;
-  @Input() city: string;
-  @Input() country: string;
-  @Input() linkedinID?: string;
-  @Input() githubID?: string;
+  email = input<string>();
+  phone = input<string>();
+  city = input<string>();
+  country = input<string>();
+  linkedinID = input<string>();
+  githubID = input<string>();
 }

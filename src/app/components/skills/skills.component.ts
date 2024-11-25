@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 
 import { SectionComponent } from '../section/section.component';
 import { Skill } from 'src/app/models/resume.model';
@@ -9,12 +9,12 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [SectionComponent, NgClass],
   template: `
-    <rb-section title="{{ title }}" display="filled">
+    <rb-section title="{{ title() }}" display="filled">
       <div class="flex flex-col gap-3">
-        @for (skill of skills; track skill) {
+        @for (skill of skills(); track skill.name) {
         <div class="flex flex-col">
           <h3 class="font-bold">{{ skill.name }}</h3>
-          @if(display === 'continuous') {
+          @if(display() === 'continuous') {
           <div class="border border-yellow-400">
             <div
               [ngClass]="[
@@ -24,7 +24,7 @@ import { NgClass } from '@angular/common';
               ]"
             ></div>
           </div>
-          } @if(display === 'discrete') {
+          } @if(display() === 'discrete') {
           <div class="flex gap-2">
             <div
               class="inline-block border border-yellow-400 h-4 w-4 rounded-full"
@@ -66,9 +66,9 @@ import { NgClass } from '@angular/common';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SkillsComponent {
-  @Input() display: 'discrete' | 'continuous' = 'discrete';
-  @Input() title: string;
-  @Input() skills: Skill[];
+  display = input<'discrete' | 'continuous'>('discrete');
+  title = input<string>();
+  skills = input<Skill[]>();
 
   levelsDictionary: Record<string, string> = {
     EXPERT: 'w-full',
