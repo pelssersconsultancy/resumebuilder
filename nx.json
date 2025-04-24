@@ -75,14 +75,7 @@
     }
   },
   "defaultProject": "resumebuilder",
-  "nxCloudAccessToken": "MDI2N2RhZjItZDhiMS00OWIwLThkZDQtYmQ2MjEwYzllMDZmfHJlYWQtd3JpdGU=",
-  "tasksRunnerOptions": {
-    "default": {
-      "options": {
-        "cacheableOperations": ["build-storybook"]
-      }
-    }
-  },
+
   "useInferencePlugins": false,
   "useLegacyCache": true
 }
