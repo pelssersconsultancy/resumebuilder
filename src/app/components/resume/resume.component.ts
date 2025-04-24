@@ -7,6 +7,7 @@ import { CoursesComponent } from '../courses/courses.component';
 import { ContactComponent } from '../contact/contact.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { EducationsComponent } from '../educations/educations.component';
+import { LastUpdatedComponent } from '../last-updated/last-updated.component';
 
 @Component({
   selector: 'rb-resume',
@@ -19,6 +20,7 @@ import { EducationsComponent } from '../educations/educations.component';
     ContactComponent,
     SkillsComponent,
     EducationsComponent,
+    LastUpdatedComponent,
   ],
   template: `
     @let myResume = resume();
@@ -43,6 +45,7 @@ import { EducationsComponent } from '../educations/educations.component';
       </div>
       <div class="flex">
         <div class="flex flex-col w-[75mm] gap-4 p-4 bg-neutral-50">
+
           <rb-contact
             [email]="myResume.email"
             [phone]="myResume.phone"
@@ -55,6 +58,7 @@ import { EducationsComponent } from '../educations/educations.component';
             [skills]="myResume.languages"
             title="Languages"
           /><!-- [display]="'continuous'" -->
+          <rb-last-updated [date]="myResume.lastUpdated"></rb-last-updated>
         </div>
         <div class="flex flex-col w-[135mm] gap-4 p-4 ">
           <rb-experiences [experiences]="myResume.experiences" />
