@@ -18,6 +18,7 @@ export interface Resume {
   experiences: Experience[];
   educations: Education[];
   courses: Course[];
+  lastUpdated: string;
 }
 
 export const Novice = { name: 'NOVICE', value: 1 };

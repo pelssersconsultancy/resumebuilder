@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ResumeComponent } from './components/resume/resume.component';
 import {
   Beginner,
   Competent,
@@ -11,7 +10,7 @@ import {
 
 @Component({
   standalone: true,
-  imports: [RouterModule, ResumeComponent],
+  imports: [RouterModule],
   selector: 'rb-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -103,5 +102,6 @@ export class AppComponent {
     linkedinID: 'john-doe-02950992',
     githubID: 'johndoe',
     website: '',
+    lastUpdated: '24-04-2025',
   };
 }

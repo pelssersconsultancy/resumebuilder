@@ -102,5 +102,6 @@ export class DemoComponent {
     linkedinID: 'john-doe-02950992',
     githubID: 'johndoe',
     website: '',
+    lastUpdated: '24-04-2025',
   };
 }
