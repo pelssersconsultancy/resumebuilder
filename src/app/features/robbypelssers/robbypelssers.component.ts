@@ -507,7 +507,7 @@ export class RobbyPelssersComponent {
       { name: 'Svelte', level: Beginner },
     ],
     summary:
-      'I am a passionate full stack software developer with +20 years of experience. I programmed in several languages like Java, Scala, Python, Typescript and used different datasources like MySql, MongoDB, DynamoDB, XML Databases. I experimented with frontend frameworks like Svelte, Vue and Angular.  I decided to overhaul my resume made in Word and created this new version in Angular using pure html and tailwind in January 2024.',
+      'I am a passionate full stack software developer with +20 years of experience. I programmed in several languages like Java, Scala, Python, Typescript and used different datasources like MySql, MongoDB, DynamoDB, XML Databases. I experimented with frontend frameworks like Svelte, Vue and Angular.  I decided to overhaul my resume made in Word and created this new version in Angular using pure html and tailwind in January 2024.  I recently started learning Azure Devops and C# and most probably will start spending some time on investigating the MCP hype',
     linkedinID: 'robbypelssers',
     githubID: 'pelssersconsultancy',
     website: '',
