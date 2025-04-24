@@ -511,6 +511,6 @@ export class RobbyPelssersComponent {
     linkedinID: 'robbypelssers',
     githubID: 'pelssersconsultancy',
     website: '',
-    lastUpdated: '24-04-2025',
+    lastUpdated: '25-04-2025',
   };
 }
