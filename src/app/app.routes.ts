@@ -6,7 +6,7 @@ export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'demo',
+    redirectTo: 'robbypelssers',
   },
   {
     path: 'demo',
