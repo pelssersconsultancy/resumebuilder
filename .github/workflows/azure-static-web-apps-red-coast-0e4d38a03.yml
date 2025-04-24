@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+      - test
+  # pull_request:
+  #   types: [opened, synchronize, reopened, closed]
+  #   branches:
+  #     - main
 
 jobs:
   build_and_deploy_job:
@@ -30,6 +31,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: '/' # App source code path
           output_location: 'dist/resumebuilder/browser' # Built app content directory - optional
+          production_branch: 'main' # The branch that will automatically trigger a deployment when pushed to. This is typically the main branch of your repository.
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
