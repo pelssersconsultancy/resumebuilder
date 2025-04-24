@@ -12,7 +12,7 @@ on:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
@@ -20,6 +20,15 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Set environment variables
+        run: |
+          if [ ${{ github.ref}} = "refs/heads/main" ]; then
+            echo "ENVIRONMENT=production" >> $GITHUB_ENV
+          elif [ ${{ github.ref}} = "refs/heads/test" ]; then
+            echo "ENVIRONMENT=staging" >> $GITHUB_ENV
+          else
+            echo "ENVIRONMENT=development" >> $GITHUB_ENV
+          fi
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -32,6 +41,7 @@ jobs:
           app_location: '/' # App source code path
           output_location: 'dist/resumebuilder/browser' # Built app content directory - optional
           production_branch: 'main' # The branch that will automatically trigger a deployment when pushed to. This is typically the main branch of your repository.
+          app_build_command: 'npm run build -- --configuration=${{ env.ENVIRONMENT }}' # Command to build your app. This is typically npm run build or npm run build -- --configuration=staging for Angular apps.
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
